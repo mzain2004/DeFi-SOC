@@ -1,0 +1,11 @@
+[package]
+name = "ingestion"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shared_types = { path = "../shared_types" }
+tokio = { version = "1.38", features = ["full"] }
+tokio-tungstenite = "0.23"
+redis = { version = "0.25", features = ["tokio-comp"] }
+serde_json = "1.0"

@@ -1,0 +1,39 @@
+name: CI Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust-check:
+    name: Rust Workspace Build & Verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: Cache Rust Dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Cargo Build Skeleton Workspace
+        run: cargo build --all-targets
+
+      - name: Cargo Unit & Integration Tests
+        run: cargo test --workspace
+
+      - name: Cargo Clippy Linting (Strict)
+        run: cargo clippy --all-targets -- -D warnings
+
+  # NOTE: Next.js app build step is explicitly omitted in CI for now.
+  # As documented in docs/strip_report.md, the app/ tree copied from PhishSlayer-V2
+  # contains legacy Wazuh/MSSP remnants that have not been stripped yet.
+  # Next.js build will be added to this workflow once Step 2's strip task is completed & merged.

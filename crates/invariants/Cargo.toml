@@ -1,0 +1,9 @@
+[package]
+name = "invariants"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shared_types = { path = "../shared_types" }
+verification = { path = "../verification" }
+serde = { version = "1.0", features = ["derive"] }

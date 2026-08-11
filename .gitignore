@@ -1,0 +1,36 @@
+# Rust
+target/
+# Cargo.lock policy: Cargo.lock is committed (application/binary workspace policy)
+
+# Node.js
+node_modules/
+.next/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+tsconfig.tsbuildinfo
+
+# Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# IDEs & System
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.agent/

@@ -1,0 +1,3 @@
+# Defi Soc (DeFi Security Operations Center)
+
+Defi Soc is an automated security operations center and real-time invariant monitoring platform for DeFi protocols under Cygnus Ventures SMC-Pvt Ltd. The architecture links a Next.js 15 control dashboard with low-latency Rust telemetry ingestion, `revm` transaction trace verification, deterministic invariant evaluation, and an isolated EIP-712 session-key signer service. For technical specifications and architectural patterns, refer to [docs/strip_report.md](file:///D:/Defi%20Soc/docs/strip_report.md), [docs/aegis_patterns.md](file:///D:/Defi%20Soc/docs/aegis_patterns.md), and [docs/dev_setup.md](file:///D:/Defi%20Soc/docs/dev_setup.md).

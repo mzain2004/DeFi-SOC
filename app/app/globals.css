@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+
+  --bg-void: #050A0F;
+  --bg-base: #080D12;
+  --bg-surface: #0D1117;
+  --bg-elevated: #111720;
+  --border: #1F2D3D;
+  --border-sub: #1A2332;
+  --accent: #7C5CFF;
+  --accent-h: #6B4EE6;
+  --intel: #00D4FF;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --high: #F97316;
+  --danger: #EF4444;
+  --text-primary: #EDF2F7;
+  --text-sec: #8899AA;
+  --text-muted: #556677;
+  
+  /* Fallback color variables for components using standard tailwind styles */
+  --background: var(--bg-base);
+  --foreground: var(--text-primary);
+}
+
+@theme inline {
+  --color-bg-void: var(--bg-void);
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-border: var(--border);
+  --color-border-sub: var(--border-sub);
+  --color-accent: var(--accent);
+  --color-accent-h: var(--accent-h);
+  --color-intel: var(--intel);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-high: var(--high);
+  --color-danger: var(--danger);
+  --color-text-primary: var(--text-primary);
+  --color-text-sec: var(--text-sec);
+  --color-text-muted: var(--text-muted);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-syne: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+

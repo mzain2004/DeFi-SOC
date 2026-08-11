@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ingestion",
+    "crates/verification",
+    "crates/invariants",
+    "crates/crypto",
+    "crates/pending_store",
+    "crates/shared_types",
+]
